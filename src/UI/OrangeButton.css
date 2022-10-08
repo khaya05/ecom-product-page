@@ -1,0 +1,18 @@
+.orange-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--orange);
+  padding-block: 20px;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.orange-btn-container:hover{
+  background-color: var(--orange-hover);
+}

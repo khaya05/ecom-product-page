@@ -1,0 +1,11 @@
+ .images-container{
+  border: 1px solid var(--orange);
+  height: 300px;
+  width: 100%;
+}
+
+@media (min-width: 620px) {
+  .images-container{
+    height: 566px;
+  }
+}

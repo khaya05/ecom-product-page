@@ -1,0 +1,35 @@
+.increment-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 25px;
+  height: 56px;;
+  margin-bottom: 1rem;
+  background: var(--very_light_grey);
+  /* border: 1px solid green; */
+  /* width: 100% */
+}
+
+.increment-button {
+  border: none;
+  display: grid;
+  place-items: center;
+  background: none;
+  cursor: pointer;
+
+}
+
+.increment-button:hover {
+  color: var(--orange-hover);
+}
+
+.count {
+  font-size: 1rem;
+}
+
+@media (min-width: 620px) {
+  .increment-btns-container {
+    margin: 0 1rem 0 0;
+  }
+}

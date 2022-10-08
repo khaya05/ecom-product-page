@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@700&family=Roboto+Mono:ital,wght@0,300;0,700;1,400&family=Roboto+Slab:wght@300;400;500;700&family=Rubik:ital,wght@1,300&display=swap');
+
+:root {
+  --very_dark_blue: hsl(220, 13%, 13%);
+  --dark_grayish_blue: hsl(219, 9%, 45%);
+  --light_gray: hsla(219, 35%, 92%, 1);
+  --very_light_grey: hsla(220, 59%, 98%, 1);
+  --grayish_blue: hsl(220, 14%, 75%);
+  --light_grayish_blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --orange: hsla(26, 100%, 55%, 1);
+  --orange-hover: hsla(26, 100%, 71%, 1);
+
+  --orange-light: hsla(26, 100%, 94%, 1);
+
+;
+
+  --md: 620px
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Commissioner', sans-serif;
+}

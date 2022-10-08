@@ -1,0 +1,15 @@
+/* .nav-container {
+  margin-bottom: 25px;
+} */
+@media (min-width: 620px) {
+  .nav-container {
+    height: 84px;
+    margin-top: 1rem;
+    margin-bottom: 5.625rem;
+  }
+}
+
+main {
+  max-width: 1015px;
+  margin-inline: auto;
+}

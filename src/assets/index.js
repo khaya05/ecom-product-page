@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import menuIcon from './icon-menu.svg';
 import cartIcon from './icon-cart.svg';
 import deleteIcon from './icon-delete.svg';
+import closeIcon from './icon-close.svg';
 import profile from './image-avatar.png';
 import product_1 from './image-product-1.jpg';
 import product_2 from './image-product-2.jpg';
@@ -21,6 +22,7 @@ export {
   menuIcon,
   cartIcon,
   deleteIcon,
+  closeIcon,
   profile,
   product_1,
   product_2,

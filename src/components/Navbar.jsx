@@ -1,18 +1,25 @@
 import { menuIcon, logo, cartIcon, profile } from '../assets';
+import { useGlobalContext } from '../context';
+import { links } from '../data';
 import { nanoid } from 'nanoid';
 
 import './styles/Navbar.css';
 
 function Navbar() {
-  const links = ['collection', 'men', 'women', 'about', 'contact'];
+  const { setShowCart, showCart, setShowAside } = useGlobalContext();
 
   return (
     <nav>
       {/* logo and links or menuBtn */}
       <div className="logo__links-container">
         {/* menu btn */}
-
-        <img src={menuIcon} alt="" className="menu" />
+        <button
+          type="button"
+          className="toggle-menu"
+          ocClick={() => setShowAside(true)}
+        >
+          <img src={menuIcon} alt="" className="menu" />
+        </button>
 
         {/* logo */}
         <img src={logo} alt="logo" className="logo" />
@@ -28,8 +35,18 @@ function Navbar() {
       </div>
       {/* cart and profile */}
       <div className="cart__profile-container">
-        <img src={cartIcon} alt="" className='cartIcon' />
-        <img src={profile} alt="" className='profile' />
+        <div className='cart-btn-and-counter'>
+          <div className="counter">
+            <p>3</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowCart((prevState) => !prevState)}
+          >
+            <img src={cartIcon} alt="" className="cartIcon" />
+          </button>
+        </div>
+        <img src={profile} alt="" className="profile" />
       </div>
     </nav>
   );

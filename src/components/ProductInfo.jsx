@@ -3,7 +3,7 @@ import './styles/ProductInfo.css'
 
 function ProductInfo() {
   return (
-    <section>
+    <section id='product-info'>
       <div className="gallery-container">
         <ImagesGallery />
       </div>

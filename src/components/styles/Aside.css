@@ -1,0 +1,47 @@
+aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 67%; */
+  height: 100%;
+  z-index: 2;
+  padding: 35px;
+}
+
+aside button {
+  margin-bottom: 54px;
+  border: 0;
+  background: 0;
+  display: grid;
+  place-items: center;
+  height: 14px;
+  aspect-ratio: 1;
+}
+
+aside ul li {
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+aside ul li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.aside-close {
+  width: 0;
+}
+.aside-open{
+  width: 67%
+}
+
+aside ul li a {
+  color: var(--very_dark_blue);
+  text-decoration: none;
+}
+@media (min-width: 620px) {
+  aside {
+    display: none;
+  }
+}

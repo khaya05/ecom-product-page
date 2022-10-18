@@ -1,28 +1,26 @@
 import { IncrementButton, OrangeButton } from '../UI';
 import { cartIcon } from '../assets';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useGlobalContext } from '../context';
 
 import './styles/ItemInfo.css';
 
 function ItemInfo() {
+
+  const{product:{name,desc,price,discount}} = useGlobalContext()
+
   return (
     <div className="item-info-container">
       <h4>sneaker company</h4>
-      <h2>
-        {' '}
-        fall limited edition <span>sneakers</span>
-      </h2>
-      <p className="description">
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
+      <h2>{name}</h2>
+      <p className="description">{desc}
       </p>
       <div className="price-info">
         <div className="price__discount-container">
-          <p className="curr-price">$125.00</p>
-          <p className="discount">50%</p>
+          <p className="curr-price">${price * discount / 100}</p>
+          <p className="discount">{discount}%</p>
         </div>
-        <p className="original-price">$250</p>
+        <p className="original-price">${price}</p>
       </div>
       <div className="btn-container">
         {/* increment */}

@@ -8,8 +8,6 @@ function ImagesGallery() {
   const [main, setMain] = useState(images[0]);
   const { showBackdrop, setShowBackdrop } = useGlobalContext();
 
-  console.log(showBackdrop);
-
   return (
     <section id="images-container">
       <img

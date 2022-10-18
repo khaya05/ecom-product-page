@@ -1,7 +1,14 @@
-import './OrangeButton.css'
+import { useGlobalContext } from '../context';
+import './OrangeButton.css';
 
 function OrangeButton({ children }) {
-  return <button type='button' className='orange-btn-container'>{children}</button>;
+  const { addToCart } = useGlobalContext();
+
+  return (
+    <button type="button" className="orange-btn-container" onClick={addToCart}>
+      {children}
+    </button>
+  );
 }
 
 export default OrangeButton;

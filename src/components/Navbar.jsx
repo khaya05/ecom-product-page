@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import './styles/Navbar.css';
 
 function Navbar() {
-  const { setShowCart, showCart, setShowAside } = useGlobalContext();
+  const { setShowCart, showCart, setShowAside , quantity} = useGlobalContext();
 
   return (
     <nav>
@@ -37,7 +37,7 @@ function Navbar() {
       <div className="cart__profile-container">
         <div className='cart-btn-and-counter'>
           <div className="counter">
-            <p>3</p>
+            <p>{quantity }</p>
           </div>
           <button
             type="button"

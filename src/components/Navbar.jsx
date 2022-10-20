@@ -6,7 +6,12 @@ import { nanoid } from 'nanoid';
 import './styles/Navbar.css';
 
 function Navbar() {
-  const { setShowCart, showCart, setShowAside , quantity} = useGlobalContext();
+  const { setShowCart, showCart, setShowAside , quantity,setShowBackdrop} = useGlobalContext();
+
+  const handleShowAside = () => {
+    setShowAside(true)
+    setShowBackdrop(true)
+  }
 
   return (
     <nav>
@@ -16,7 +21,7 @@ function Navbar() {
         <button
           type="button"
           className="toggle-menu"
-          ocClick={() => setShowAside(true)}
+          onClick={handleShowAside}
         >
           <img src={menuIcon} alt="" className="menu" />
         </button>

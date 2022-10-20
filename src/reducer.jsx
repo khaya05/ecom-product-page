@@ -17,7 +17,7 @@ function reducer(state, action) {
       quantity,
       total,
     } = state;
-    const product = [
+    const newProduct = [
       {
         name,
         thumb: product_1_thumb,
@@ -26,12 +26,15 @@ function reducer(state, action) {
         total,
       },
     ];
-    return {
-      ...state,
-      quantity: state.quantity + state.amount,
-      amount: 0,
-      cart: product,
-    };
+
+    if (state.amount > 0) {
+      return {
+        ...state,
+        quantity: state.quantity + state.amount,
+        // amount: 0,
+        cart: newProduct,
+      };
+    }
   }
 
   if (action.type === 'DELETE_ITEM') {

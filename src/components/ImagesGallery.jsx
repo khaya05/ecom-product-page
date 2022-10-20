@@ -1,12 +1,34 @@
 import { useState } from 'react';
 import { useGlobalContext } from '../context';
+import { next, previous } from '../assets';
 import { images } from '../data';
 
 import './styles/ImagesGallery.css';
 
 function ImagesGallery() {
-  const [main, setMain] = useState(images[0]);
-  const { showBackdrop, setShowBackdrop } = useGlobalContext();
+  const { showBackdrop, setShowBackdrop, main, index, setMain, setIndex } =
+    useGlobalContext();
+
+  const handleNext = () => {
+    if (index === images.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex((oldState) => oldState + 1);
+    }
+
+    setMain(images[index]);
+  };
+
+  const handlePrev = () => {
+    if (index === 0) {
+      setIndex(images.length - 1);
+    } else {
+      setIndex((oldState) => oldState - 1);
+    }
+    setMain(images[index]);
+  };
+
+  console.log(showBackdrop);
 
   return (
     <section id="images-container">
@@ -16,6 +38,14 @@ function ImagesGallery() {
         className="main-image"
         onClick={() => setShowBackdrop((prevState) => !prevState)}
       />
+      <button className="mobile-slider-btn previous-btn" onClick={handlePrev}>
+        <img src={previous} alt="" />
+      </button>
+
+      <button className="mobile-slider-btn next-btn" onClick={handleNext}>
+        <img src={next} alt="" />
+      </button>
+
       <div className="gallery">
         {images.map((image, index) => {
           return (

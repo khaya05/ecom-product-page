@@ -1,4 +1,4 @@
-// import { product_1_thumb, deleteIcon } from '../assets';
+import { deleteIcon } from '../assets';
 import { useGlobalContext } from '../context';
 import { OrangeButton } from '../UI';
 
@@ -16,17 +16,18 @@ function Cart() {
     deleteItem,
   } = useGlobalContext();
 
+
   return (
     <>
       {showCart &&
-        cart.map((item) => {
-          const { name, price, discount, total, thumb,quantity  } = item;
+        cart.map((item, index) => {
+          const { name, price, discount, total, thumb, quantity } = item;
           return (
-            <article className="cart">
+            <article className="cart" key={index}>
               <h2>cart</h2>
               <hr />
-              {cart.length > 0 ? (
-                <>
+              {cart.length !== 0 ? (
+                <div>
                   <div className="cart-item">
                     <img
                       src={thumb}
@@ -53,7 +54,7 @@ function Cart() {
                       <p>Checkout</p>
                     </OrangeButton>
                   </div>
-                </>
+                </div>
               ) : (
                 <div className="cart-empty-container">
                   <p>Your cart is empty</p>

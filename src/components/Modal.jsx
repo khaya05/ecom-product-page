@@ -6,15 +6,17 @@ import './styles/Modal.css';
 
 function Backdrop() {
   const { showBackdrop } = useGlobalContext();
+
+  console.log(showBackdrop);
   return (
-    <div className={`backdrop ${showBackdrop ? 'show-backdrop' : ''}`}></div>
+    <div className={`${showBackdrop ? 'show-backdrop' : 'backdrop'}`}></div>
   );
 }
 
 function ProductsOverlay() {
   return (
     <div className="overlay">
-      <ImagesGallery />
+      {/* <ImagesGallery /> */}
     </div>
   );
 }
@@ -29,7 +31,7 @@ function Modal() {
 
       {ReactDom.createPortal(
         <ProductsOverlay />,
-        document.getElementById('products-overlay-root')
+        document.querySelector('#products-overlay-root')
       )}
     </>
   );

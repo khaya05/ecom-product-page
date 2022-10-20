@@ -8,14 +8,15 @@ import Aside from './components/Aside';
 import './components/styles/Aside.css'
 
 import './App.css';
+import Modal from './components/Modal';
 function App() {
-  const { showAside } = useGlobalContext();
+  const { showAside, showBackdrop } = useGlobalContext();
   return (
     <>
       <header>
-        {/* <div className={showAside ? 'aside-open' : 'aside-close'}>
+        <div className={showAside ? 'aside-open' : 'aside-close'}>
           <Aside />
-        </div> */}
+        </div>
         <div className="nav-container">
           <Navbar />
         </div>
@@ -24,6 +25,9 @@ function App() {
         <div>
           <Cart />
         </div>
+        { showBackdrop && <div className="">
+          <Modal />
+        </div> }
         <ProductInfo />
       </main>
     </>

@@ -2,10 +2,11 @@ aside {
   position: absolute;
   top: 0;
   left: 0;
-  /* width: 67%; */
+  width: 66.66%;
   height: 100%;
   z-index: 2;
   padding: 35px;
+  background: white;
 }
 
 aside button {
@@ -45,3 +46,11 @@ aside ul li a {
     display: none;
   }
 }
+/* 
+.hide-links,.hide-aside {
+  display: none;
+}
+
+.show-links,.show-aside{
+  display: inline-block;
+} */

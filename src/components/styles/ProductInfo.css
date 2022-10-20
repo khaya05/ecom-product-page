@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.gallery-container{
+  height: 300px ;
+}
+
 @media (min-width: 620px) {
   #product-info {
     flex-direction: row;
@@ -19,6 +23,11 @@
   .info-container {
     width: 50%;
   }
+
+  .gallery-container{
+    height: 100%;
+  }
 }
+
 
 

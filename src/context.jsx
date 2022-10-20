@@ -1,15 +1,9 @@
 import { useReducer } from 'react';
 import { createContext, useContext, useState } from 'react';
+import { images } from './data';
 import reducer from './reducer';
 
 const AppContext = createContext();
-
-// const initialState = {
-//   originalPrice: '___',
-//   discountOffer: '___',
-//   currentPrice: 'parseFloat(originalPrice * discountOffer)',
-//   quantity: '___',
-// };
 
 const initialState = {
   product: {
@@ -29,7 +23,8 @@ const AppProvider = ({ children }) => {
   const [showAside, setShowAside] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showBackdrop, setShowBackdrop] = useState(false);
-  // const [cartItems, setCartItems] = useState(['']);
+  const [index, setIndex] = useState(0);
+  const [main, setMain] = useState(images[index]);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const increase = () => {
@@ -51,14 +46,16 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
+        index,
+        main,
         showAside,
-        // cartItems,
         showCart,
         showBackdrop,
         setShowBackdrop,
         setShowCart,
         setShowAside,
-        // setCartItems,
+        setIndex,
+        setMain,
         ...state,
         increase,
         decrease,

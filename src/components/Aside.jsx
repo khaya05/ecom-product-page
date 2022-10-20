@@ -3,23 +3,33 @@ import { useGlobalContext } from '../context';
 import { nanoid } from 'nanoid';
 import { links } from '../data';
 
-import './styles/Aside.css'
+import './styles/Aside.css';
 
 function Aside() {
-  const { setShowAside } = useGlobalContext();
+  const { setShowAside, setShowBackdrop, showAside } = useGlobalContext();
+
+  const closeAside = () => {
+    setShowAside(false);
+    setShowBackdrop(false);
+  };
+
   return (
-    <aside>
-      <button type="button" onClick={() => setShowAside(false)}>
-        <img src={closeIcon} alt="close Icon" />
-      </button>
-      <ul>
-        {links.map((link) => (
-          <li key={nanoid()}>
-            <a href="#">{link}</a>
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <>
+      {showAside && (
+        <aside className={showAside ? 'showAside' : 'hide-aside'}>
+          <button type="button" onClick={closeAside}>
+            <img src={closeIcon} alt="close Icon" />
+          </button>
+          <ul className={showAside ? 'show-links' : 'hide-links'}>
+            {links.map((link) => (
+              <li key={nanoid()}>
+                <a href="#">{link}</a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </>
   );
 }
 

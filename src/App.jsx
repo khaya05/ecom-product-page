@@ -25,7 +25,7 @@ function App() {
         <div>
           <Cart />
         </div>
-        { showBackdrop && <div className="">
+        { showBackdrop && <div className="app-modal-container">
           <Modal />
         </div> }
         <ProductInfo />

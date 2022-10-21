@@ -9,14 +9,16 @@ function Backdrop() {
 
   console.log(showBackdrop);
   return (
-    <div className={`${showBackdrop ? 'show-backdrop' : 'backdrop'}`}></div>
+    <div className={`${showBackdrop ? 'show-backdrop' : 'backdrop'}`}>
+      <ProductsOverlay />
+    </div>
   );
 }
 
 function ProductsOverlay() {
   return (
-    <div className="overlay">
-      {/* <ImagesGallery /> */}
+    <div className="imagesGallery-container">
+      <ImagesGallery />
     </div>
   );
 }
@@ -29,10 +31,10 @@ function Modal() {
         document.querySelector('#backdrop-root')
       )}
 
-      {ReactDom.createPortal(
+      {/* {ReactDom.createPortal(
         <ProductsOverlay />,
         document.querySelector('#products-overlay-root')
-      )}
+      )} */}
     </>
   );
 }

@@ -28,7 +28,11 @@ function ImagesGallery() {
     setMain(images[index]);
   };
 
-  console.log(showBackdrop);
+  const handleMainClick = () => {
+    if (screen.width >= 620) {
+      setShowBackdrop((prevState) => !prevState);
+    }
+  };
 
   return (
     <section id="images-container">
@@ -36,7 +40,7 @@ function ImagesGallery() {
         src={main.url}
         alt="main-image"
         className="main-image"
-        onClick={() => setShowBackdrop((prevState) => !prevState)}
+        onClick={handleMainClick}
       />
       <button className="mobile-slider-btn previous-btn" onClick={handlePrev}>
         <img src={previous} alt="" />

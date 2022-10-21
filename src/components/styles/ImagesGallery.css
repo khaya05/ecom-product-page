@@ -1,4 +1,4 @@
-#images-container {
+#images-gallery-container {
   /* border: 1px solid red; */
   height: 100%;
   /* width: 100%; */
@@ -10,7 +10,7 @@
 }
 
 @media (min-width: 620px) {
-  #images-container {
+  #images-gallery-container {
     width: 445px;
   }
 }
@@ -57,7 +57,7 @@
 }
 
 @media (min-width: 620px) {
-  #images-container {
+  #images-gallery-container {
     height: 566px;
   }
 }

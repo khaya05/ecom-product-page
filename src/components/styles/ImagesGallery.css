@@ -1,7 +1,5 @@
 #images-gallery-container {
-  /* border: 1px solid red; */
   height: 100%;
-  /* width: 100%; */
   display: flex;
   position: relative;
   flex-direction: column;
@@ -76,11 +74,6 @@
   width: 40px;
   height: 40px;
 }
-
-/* .mobile-slider-btn img {
-  width: 5.71px;
-  height: 11.43px;
-} */
 
 .next-btn {
   bottom: calc(150px + 50px);

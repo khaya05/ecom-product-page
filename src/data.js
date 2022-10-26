@@ -40,13 +40,3 @@ export const images = [
 
 export const links = ['collection', 'men', 'women', 'about', 'contact'];
 
-// export const products = [
-//   {
-//     id: nanoid(),
-//     name: 'fall limited edition sneakers',
-//     originalPrice: 250,
-//     discount: 50,
-//     currentPrice: this.originalPrice * (this.discount / 100),
-//     desc: 'These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.',
-//   },
-// ];

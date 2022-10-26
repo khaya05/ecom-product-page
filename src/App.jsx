@@ -4,11 +4,11 @@ import { useGlobalContext } from './context';
 
 import Cart from './components/Cart';
 import Aside from './components/Aside';
+import Modal from './components/Modal';
 
 import './components/styles/Aside.css'
 
 import './App.css';
-import Modal from './components/Modal';
 function App() {
   const { showAside, showBackdrop,showCart } = useGlobalContext();
   return (

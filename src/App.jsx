@@ -10,7 +10,7 @@ import './components/styles/Aside.css'
 import './App.css';
 import Modal from './components/Modal';
 function App() {
-  const { showAside, showBackdrop } = useGlobalContext();
+  const { showAside, showBackdrop,showCart } = useGlobalContext();
   return (
     <>
       <header>
@@ -23,7 +23,7 @@ function App() {
       </header>
       <main>
         <div>
-          <Cart />
+           <Cart />
         </div>
         { showBackdrop && <div className="app-modal-container">
           <Modal />

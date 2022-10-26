@@ -13,7 +13,7 @@
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.75);
-  z-index: 1;
+  z-index: 2;
 }
 
 .main-image.full-screen {
@@ -51,6 +51,7 @@
   border: none;
   background: white;
   position: relative;
+  cursor: pointer;
 }
 
 .full-screen-previous-btn {
@@ -88,6 +89,7 @@
   width: 88px;
   height: 88px;
   border-radius: 10px;
+  cursor:pointer
 }
 
 .full-screen-thumbnails-gallery img:not(:first-child) {

@@ -16,7 +16,7 @@ function Aside() {
   return (
     <>
       {showAside && (
-        <aside className={showAside ? 'showAside' : 'hide-aside'}>
+        <aside className={showAside ? 'show-aside' : ''}>
           <button type="button" onClick={closeAside}>
             <img src={closeIcon} alt="close Icon" />
           </button>

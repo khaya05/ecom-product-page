@@ -1,33 +1,30 @@
 import { deleteIcon } from '../assets';
 import { useGlobalContext } from '../context';
-import { OrangeButton } from '../UI';
 
 import './styles/Cart.css';
+import './styles/OrangeButton.css';
 
 function Cart() {
   const {
-    // cartItems,
-    // setCartItems,
     showCart,
-    // quantity,
-    // product: { price, discount, name },
-    // total,
+    product: { price, discount, name },
     cart,
     deleteItem,
   } = useGlobalContext();
 
-
   return (
     <>
-      {showCart &&
-        cart.map((item, index) => {
-          const { name, price, discount, total, thumb, quantity } = item;
-          return (
-            <article className="cart" key={index}>
-              <h2>cart</h2>
-              <hr />
-              {cart.length !== 0 ? (
-                <div>
+      {showCart && (
+        <article className="cart">
+          <h2>cart</h2>
+          <hr />
+          {cart.length > 0 ? (
+            cart.map((item, index) => {
+              const { name, price, total, thumb, quantity } = item;
+              const currentPrice = (price * (discount / 100)).toFixed(2);
+              const totalPrice = (currentPrice * quantity).toFixed(2);
+              return (
+                <div key={index}>
                   <div className="cart-item">
                     <img
                       src={thumb}
@@ -37,8 +34,7 @@ function Cart() {
                     <div>
                       <p className="cart-item__product-name">{name}</p>
                       <p className="cart-item__price">
-                        ${price * (discount / 100)} x {quantity}{' '}
-                        <span>${price * (discount / 100) * quantity}</span>
+                        ${currentPrice} x {quantity} <span>${totalPrice}</span>
                       </p>
                     </div>
                     <button
@@ -50,19 +46,18 @@ function Cart() {
                     </button>
                   </div>
                   <div className="checkout-btn">
-                    <OrangeButton>
-                      <p>Checkout</p>
-                    </OrangeButton>
+                    <button className="orange-btn-container">Checkout</button>
                   </div>
                 </div>
-              ) : (
-                <div className="cart-empty-container">
-                  <p>Your cart is empty</p>
-                </div>
-              )}
-            </article>
-          );
-        })}
+              );
+            })
+          ) : (
+            <div className="cart-empty-container">
+              <p>Your cart is empty</p>
+            </div>
+          )}
+        </article>
+      )}
     </>
   );
 }

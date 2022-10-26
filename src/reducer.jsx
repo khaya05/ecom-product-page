@@ -4,6 +4,7 @@ function reducer(state, action) {
   if (action.type === 'INCREASE_AMOUNT') {
     return { ...state, amount: state.amount + 1 };
   }
+
   if (action.type === 'DECREASE_AMOUNT') {
     if (state.amount === 0) {
       return { ...state, amount: 0 };
@@ -14,7 +15,6 @@ function reducer(state, action) {
   if (action.type === 'ADD_TO_CART') {
     const {
       product: { name, price },
-      quantity,
       total,
     } = state;
     const newProduct = [
@@ -22,7 +22,7 @@ function reducer(state, action) {
         name,
         thumb: product_1_thumb,
         price,
-        quantity,
+        quantity: state.quantity + state.amount,
         total,
       },
     ];
@@ -31,7 +31,6 @@ function reducer(state, action) {
       return {
         ...state,
         quantity: state.quantity + state.amount,
-        // amount: 0,
         cart: newProduct,
       };
     }

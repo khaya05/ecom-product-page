@@ -8,7 +8,6 @@ nav,
 }
 
 nav {
-  /* border: 1px solid blue; */
   max-width: 1110px;
   margin-inline: auto;
   padding: 19px 20px 25px;
@@ -20,12 +19,10 @@ nav {
 
 .nav-links {
   display: none;
-  /* border: 1px solid; */
   height: 100%;
 }
 
 .nav-links li {
-  /* border: 1px solid green; */
   list-style: none;
 }
 
@@ -59,7 +56,6 @@ nav {
     padding: 0;
     height: 100%;
     border-bottom: 1px solid var(--grayish_blue);
-    /* border-bottom: 1px solid var(--dark_grayish_blue) */
   }
   .menu {
     display: none;
@@ -116,7 +112,6 @@ nav {
 .cart__profile-container .counter {
   position: relative;
   bottom: 4;
-  /* right: ; */
   width: 19px;
   height: 14px;
   border-radius: 6.5px;

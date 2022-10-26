@@ -6,23 +6,27 @@ import { nanoid } from 'nanoid';
 import './styles/Navbar.css';
 
 function Navbar() {
-  const { setShowCart, showCart, setShowAside , quantity,setShowBackdrop} = useGlobalContext();
+  const { setShowCart, setLocation, setShowAside, quantity, setShowBackdrop } =
+    useGlobalContext();
 
   const handleShowAside = () => {
-    setShowAside(true)
-    setShowBackdrop(true)
-  }
+    setShowAside(true);
+    setShowBackdrop(true);
+  };
+
+  const displayCart = (e) => {
+    const tempBtn = e.target.getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    setLocation(center);
+    setShowCart((prevState) => !prevState);
+  };
 
   return (
     <nav>
       {/* logo and links or menuBtn */}
       <div className="logo__links-container">
         {/* menu btn */}
-        <button
-          type="button"
-          className="toggle-menu"
-          onClick={handleShowAside}
-        >
+        <button type="button" className="toggle-menu" onClick={handleShowAside}>
           <img src={menuIcon} alt="" className="menu" />
         </button>
 
@@ -40,14 +44,11 @@ function Navbar() {
       </div>
       {/* cart and profile */}
       <div className="cart__profile-container">
-        <div className='cart-btn-and-counter'>
+        <div className="cart-btn-and-counter">
           <div className="counter">
-            <p>{quantity }</p>
+            <p>{quantity}</p>
           </div>
-          <button
-            type="button"
-            onClick={() => setShowCart((prevState) => !prevState)}
-          >
+          <button type="button" onClick={displayCart}>
             <img src={cartIcon} alt="" className="cartIcon" />
           </button>
         </div>

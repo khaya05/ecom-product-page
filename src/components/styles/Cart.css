@@ -13,7 +13,8 @@
 @media (min-width: 620px) {
   .cart {
     width: 360px;
-    right: 89px;
+    /* left: calc(1406px - (360px) / 2) */
+    /* right:  */
   }
 }
 

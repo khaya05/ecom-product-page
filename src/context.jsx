@@ -24,6 +24,7 @@ const AppProvider = ({ children }) => {
   const [showBackdrop, setShowBackdrop] = useState(false);
   const [index, setIndex] = useState(0);
   const [main, setMain] = useState(images[index]);
+  const [location, setLocation] = useState(0);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const increase = () => {
@@ -50,6 +51,8 @@ const AppProvider = ({ children }) => {
         showAside,
         showCart,
         showBackdrop,
+        location,
+        setLocation,
         setShowBackdrop,
         setShowCart,
         setShowAside,

@@ -7,15 +7,21 @@ import './styles/OrangeButton.css';
 function Cart() {
   const {
     showCart,
-    product: { price, discount, name },
+    product: { discount },
     cart,
     deleteItem,
+    location,
   } = useGlobalContext();
+
+  const desktopStyles = { left: `${location - 180}px` };
 
   return (
     <>
       {showCart && (
-        <article className="cart">
+        <article
+          className="cart"
+          style={screen.width >= 620 ? desktopStyles : {}}
+        >
           <h2>cart</h2>
           <hr />
           {cart.length > 0 ? (

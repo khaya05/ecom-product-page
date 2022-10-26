@@ -44,10 +44,12 @@ function Navbar() {
       </div>
       {/* cart and profile */}
       <div className="cart__profile-container">
-        <div className="cart-btn-and-counter">
+        {quantity > 0 && (
           <div className="counter">
             <p>{quantity}</p>
           </div>
+        )}
+        <div className="cart-btn-and-counter">
           <button type="button" onClick={displayCart}>
             <img src={cartIcon} alt="" className="cartIcon" />
           </button>

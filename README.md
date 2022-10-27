@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/khaya05/ecom-product-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/khaya05/ecom-product-page)
+- Live Site URL: [Netlify](https://khaya05-ecom-product-page.netlify.app/)
 
 ## My process
 

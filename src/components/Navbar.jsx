@@ -27,7 +27,7 @@ function Navbar() {
       <div className="logo__links-container">
         {/* menu btn */}
         <button type="button" className="toggle-menu" onClick={handleShowAside}>
-          <img src={menuIcon} alt="" className="menu" />
+          <img src={menuIcon} alt="show menu" className="menu" />
         </button>
 
         {/* logo */}
@@ -51,10 +51,10 @@ function Navbar() {
         )}
         <div className="cart-btn-and-counter">
           <button type="button" onClick={displayCart}>
-            <img src={cartIcon} alt="" className="cartIcon" />
+            <img src={cartIcon} alt="toggle cart" className="cartIcon" />
           </button>
         </div>
-        <img src={profile} alt="" className="profile" />
+        <img src={profile} alt="profile image" className="profile" />
       </div>
     </nav>
   );

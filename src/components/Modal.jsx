@@ -45,21 +45,21 @@ function ProductImagesGallery() {
   return (
     <section id="full-screen-gallery">
       <button className="full-screen__close-btn" onClick={closeFullScreen}>
-        <img src={closeIcon} alt="" />
+        <img src={closeIcon} alt="close modal" />
       </button>
       <img src={main.url} alt="main-image" className="full-screen-main-image" />
       <button
         className="full-screen-slider-btn full-screen-previous-btn"
         onClick={handlePrev}
       >
-        <img src={previous} alt="" />
+        <img src={previous} alt="previous image" />
       </button>
 
       <button
         className="full-screen-slider-btn full-screen-next-btn"
         onClick={handleNext}
       >
-        <img src={next} alt="" />
+        <img src={next} alt="next image" />
       </button>
 
       <div className="full-screen-thumbnails-gallery">

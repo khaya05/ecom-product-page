@@ -21,7 +21,7 @@
   }
 }
 
-.item-info-container h2 {
+.item-info-container h1 {
   margin-top: 1rem;
   margin-bottom: 15px;
   text-transform: capitalize;
@@ -43,7 +43,7 @@
 }
 
 @media (min-width: 620px) {
-  .item-info-container h2 {
+  .item-info-container h1 {
     font-size: 44px;
   }
 
@@ -122,4 +122,8 @@
   .add-to-cart-container {
     width: 272px;
   }
+}
+
+.orange-btn-container span{
+  margin-left: 1rem;
 }

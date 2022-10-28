@@ -48,7 +48,7 @@ function Cart() {
                       className="delete-cart-items"
                       onClick={deleteItem}
                     >
-                      <img src={deleteIcon} alt="" />
+                      <img src={deleteIcon} alt="delete item from cart" />
                     </button>
                   </div>
                   <div className="checkout-btn">

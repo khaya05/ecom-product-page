@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useGlobalContext } from '../context';
 import { next, previous } from '../assets';
 import { images } from '../data';
@@ -6,7 +5,7 @@ import { images } from '../data';
 import './styles/ImagesGallery.css';
 
 function ImagesGallery() {
-  const { showBackdrop, setShowBackdrop, main, index, setMain, setIndex } =
+  const { setShowBackdrop, main, index, setMain, setIndex } =
     useGlobalContext();
 
   const handleNext = () => {
@@ -35,7 +34,7 @@ function ImagesGallery() {
   };
 
   return (
-    <section id="images-gallery-container">
+    <div id="images-gallery-container">
       <img
         src={main.url}
         alt="main-image"
@@ -43,11 +42,11 @@ function ImagesGallery() {
         onClick={handleMainClick}
       />
       <button className="mobile-slider-btn previous-btn" onClick={handlePrev}>
-        <img src={previous} alt="" />
+        <img src={previous} alt="previous image" />
       </button>
 
       <button className="mobile-slider-btn next-btn" onClick={handleNext}>
-        <img src={next} alt="" />
+        <img src={next} alt="next image" />
       </button>
 
       <div className="gallery">
@@ -63,7 +62,7 @@ function ImagesGallery() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }
 

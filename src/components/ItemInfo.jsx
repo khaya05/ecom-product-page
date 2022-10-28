@@ -10,14 +10,13 @@ function ItemInfo() {
     addToCart,
   } = useGlobalContext();
 
-  const currentPrice = price.toFixed(2)
+  const currentPrice = price.toFixed(2);
   const discountedPrice = (price * (discount / 100)).toFixed(2);
-  
 
   return (
     <div className="item-info-container">
       <h4>sneaker company</h4>
-      <h2>{name}</h2>
+      <h1>{name}</h1>
       <p className="description">{desc}</p>
       <div className="price-info">
         <div className="price__discount-container">
@@ -34,10 +33,8 @@ function ItemInfo() {
         {/* add to cart */}
         <div className="add-to-cart-container">
           <button className="orange-btn-container" onClick={addToCart}>
-            <div className="cart-icon-container">
-              <AiOutlineShoppingCart />
-            </div>
-            <p> Add to cart</p>
+            <AiOutlineShoppingCart />
+            <span>Add to cart</span>
           </button>
         </div>
       </div>

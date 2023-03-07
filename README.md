@@ -52,6 +52,7 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Vitejs](https://vitejs.dev/) 
+- **N.B Only built mobile and desktop layouts!!!**
 
 ### What I learned
 
